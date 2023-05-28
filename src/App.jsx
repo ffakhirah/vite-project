@@ -4,7 +4,7 @@ import './App.css'
 
 const DUMMY_TODO = [
   {
-    id : 1,
+    id : nanoid(),
     title : 'Belajar React JS',
     isCompleteda : false
   }
@@ -77,7 +77,8 @@ function App() {
             }}
             >
               <input type='checkbox' onChange={() => completeTodo(todo.id)} />
-              {todo.title}
+              <p>{todo.title}</p>
+              <button style={{marginleft: '16px'}}>X</button>
             </li>
           ))
         }
